@@ -18,14 +18,15 @@ from django.urls import path
 from todo import views
 
 urlpatterns = [
+    # Admin Paths
     path('admin/', admin.site.urls),
 
-    # Auth
+    # Auth Paths
     path('signup/', views.signupuser, name='signupuser'),
     path('logout/', views.logoutuser, name='logoutuser'),
     path('login/', views.loginuser, name='loginuser'),
 
-    # Todo
+    # Todos Paths
     path('', views.home, name='home'),
     path('current/', views.currenttodos, name='currenttodos'),
     path('completed/', views.completedtodos, name='completedtodos'),

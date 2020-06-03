@@ -29,7 +29,6 @@ def signupuser(request):
                 return render(request, 'todo/signupuser.html', {'form': UserCreationForm, 'error': 'That username has already been taken, please choose a new username'})
         else:
             return render(request, 'todo/signupuser.html', {'form': UserCreationForm, 'error': 'Passwords did not match'})
-            # password didn't match
 
 
 def loginuser(request):
